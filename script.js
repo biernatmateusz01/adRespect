@@ -4,6 +4,8 @@ const buttonForOpenMobileMenu = document.getElementById("openMobileMenu");
 const buttonForOpenOffer = document.getElementById("openOffer");
 const inputSearch = document.getElementById("inputSearch");
 
+let image = "";
+
 console.log(inputSearch);
 
 //Open offer
@@ -34,3 +36,26 @@ btnSearch.addEventListener("click", function () {
   inputSearch.classList.toggle("hidden");
   inputSearch.classList.toggle("-translate-y-[100px]");
 });
+
+const openImage = (item) => {
+  image = item.src;
+  document.getElementById("modal").classList.toggle("hidden");
+  document.getElementById("image-modal").src = image;
+};
+
+const btn = document.getElementById("close-modal");
+
+const closeModal = () => {
+  document.getElementById("modal").classList.toggle("hidden");
+};
+
+const showGallery = () => {
+  document.getElementById("hidden-gallery").classList.toggle("max-h-[1400px]");
+  document.getElementById('gradient-container').classList.add('hidden')
+};
+
+document
+  .getElementById("show-hidden-images")
+  .addEventListener("click", showGallery);
+
+btn.addEventListener("click", closeModal);
