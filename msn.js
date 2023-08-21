@@ -5,7 +5,6 @@ const msnry = new Macy({
     breakAt: {
       400: 2,
       700: 3,
-      // 1100: 4,
     },
     margin: {
       x: 20,

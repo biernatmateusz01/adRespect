@@ -1,4 +1,41 @@
-
 .item {
-    width: 100%;
+  width: 100%;
 }
+
+@keyframes fade-in {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes show-gallery {
+  0% {
+    height: 1400px;
+  }
+  100% {
+    max-height: 4400px;
+  }
+}
+
+@keyframes show-modal {
+  0% {
+    opacity: 0
+  }
+  100% {
+   opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fade-in 1s ease-out;
+}
+
+
+.show-gallery {
+  animation: show-gallery 1s ease-out;
+}
+
+

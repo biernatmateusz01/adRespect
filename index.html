@@ -67,13 +67,13 @@
               Oferta
             </div>
           </div>
-          <li><a href="#" class="text-[14px] inter">O firmie</a></li>
-          <li><a href="#" class="text-[14px] inter">Realizacje</a></li>
+          <li><a href="#about" class="text-[14px] inter">O firmie</a></li>
+          <li><a href="#images" class="text-[14px] inter">Realizacje</a></li>
           <li><a href="#" class="text-[14px] inter">Kontakt</a></li>
           <input
             id="inputSearch"
             type="text"
-            class="border border-green-400 -translate-y-[100px] hidden ease-in duration-200"
+            class="border border-[#1B5B31] hidden fade-in"
           />
 
           <button id="buttonForSearchOpen">
@@ -118,7 +118,7 @@
           <ul class="flex gap-12 flex-col">
             <div class="relative">
               <button id="openOffer">
-                <a href="#" class="text-[14px]">Oferta</a>
+                <a id="mobile-link" href="#" class="text-[14px]">Oferta</a>
               </button>
               <div
                 id="menuForOpen"
@@ -127,9 +127,17 @@
                 asdasd
               </div>
             </div>
-            <li><a href="#" class="text-[14px]">O firmie</a></li>
-            <li><a href="#" class="text-[14px]">Realizacje</a></li>
-            <li><a href="#" class="text-[14px]">Kontakt</a></li>
+            <li>
+              <a id="mobile-link" href="#about" class="text-[14px]">O firmie</a>
+            </li>
+            <li>
+              <a id="mobile-link" href="#images" class="text-[14px]"
+                >Realizacje</a
+              >
+            </li>
+            <li>
+              <a id="mobile-link" href="#" class="text-[14px]">Kontakt</a>
+            </li>
             <input
               id="inputSearch"
               placeholder="cd"
@@ -166,7 +174,7 @@
                 <button
                   class="text-[#1B5B31] flex gap-2 items-center inter bg-transparent border border-[#1B5B31] px-6 py-3 rounded-full ease-in duration-200 hover:bg-[#1B5B31] border hover:text-white border-[#1B5B31]"
                 >
-                  Zobacz nasze realizacje
+                  <a href="#images"> Zobacz nasze realizacje </a>
                   <svg
                     width="16"
                     height="17"
@@ -190,6 +198,20 @@
                 src="./assets/Photo.png"
                 alt="slider-img"
               />
+              <div
+                class="absolute bottom-0 right-0 bg-white flex py-6 px-8 gap-8"
+              >
+                <button>
+                  <img src="/assets/Frame 2311.png" alt="left" />
+                </button>
+                <button>
+                  <img
+                    src="/assets/Frame 2311.png"
+                    alt="right"
+                    class="rotate-180"
+                  />
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -197,7 +219,7 @@
     </section>
     <section
       id="informations"
-      class="bg-[#F5F0EC] bg-reed block mx-auto pt-[32px] pb-[32px] lg:pt-[120px] lg:pb-[160px] px-8 lg:px-0"
+      class="bg-[#F5F0EC] bg-reed block mx-auto py-8 lg:pt-[120px] lg:pb-[160px] px-8 lg:px-0"
     >
       <div class="block mx-auto max-w-[1440px]">
         <div class="lg:pl-[200px] block mx-auto lg:pr-[531px]">
@@ -205,13 +227,10 @@
             >Oferta</span
           >
           <h2
-            class="mt-4 text-[48px] font-medium leading-[115%]"
-            style="letter-spacing: -3%"
+            class="mt-4 text-[48px] font-medium leading-[115%] tracking-[-3%]"
           >
             Działamy
-            <span class="inter italic" style="letter-spacing: 0">
-              kompleksowo</span
-            >
+            <span class="inter italic tracking-0"> kompleksowo</span>
           </h2>
           <p class="text-base mt-8 inter tracking-[-1%]">
             Oferujemy kompletną obsługę inwestycji terenów zielonych.
@@ -401,7 +420,7 @@
           </button>
         </div>
         <div
-          class="lg:w-[256px] lg:right-[160px] lg:pr-[0] lg:p-[0] lg:absolute lg:top-[0] lg:bottom-[0]"
+          class="lg:w-[256px] lg:right-[160px] hidden lg:block lg:pr-[0] lg:p-[0] lg:absolute lg:top-[0] lg:bottom-[0]"
         >
           <img
             class="w-[256px] h-[256px] rounded-full object-fit-cover"
@@ -417,13 +436,15 @@
         id="modal"
         class="h-screen w-screen fixed top-0 left-0 bg-black z-[90] hidden flex items-center justify-center"
       >
-        <button id="close-modal" class="absolute top-4 right-4 text-white">
+        <button
+          id="close-modal"
+          class="absolute top-4 right-4 bg-white rounded-full text-black"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             stroke-width="1.5"
-            stroke="currentColor"
             class="w-6 h-6"
           >
             <path
@@ -452,11 +473,11 @@
                 rgba(214, 183, 158, 0) 100%
               );
             "
-            class="absolute w-full xl:h-[800px] bg-black bg-opacity-40 z-50 bottom-0 flex items-end"
+            class="absolute w-full xl:h-[800px] h-[300px] bg-black bg-opacity-40 z-50 bottom-0 flex items-end show-gallery"
           >
             <button
               id="show-hidden-images"
-              class="block items-center flex gap-2 mx-auto mb-[46px] bg-transparent rounded-full py-[12px] px-[22px] border border-black"
+              class="block animate-bounce items-center flex gap-2 mx-auto mb-[46px] bg-transparent rounded-full py-[12px] px-[22px] border border-black"
             >
               Rozwiń
               <svg
@@ -475,7 +496,7 @@
           </div>
           <div
             id="hidden-gallery"
-            class="gallery max-h-[1400px] overflow-hidden"
+            class="gallery max-h-[400px] xl:max-h-[1400px] overflow-hidden"
           >
             <img
               onclick="openImage(this)"
@@ -552,17 +573,17 @@
         <div>
           <p
             class="text-[#F5F0EC] text-[40px] leading-[120%]"
-            style="font-family: Montserrat;
-            font-size: 40px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 120%; /* 48px */
-            letter-spacing: -2px;"
+            style="
+              font-family: Montserrat;
+              font-size: 40px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 120%; /* 48px */
+              letter-spacing: -2px;
+            "
           >
             Zostańmy w kontakcie! Znajdziesz nas na
-            <span class="inter italic" style="letter-spacing: 1px"
-              >Instagramie.</span
-            >
+            <span class="inter italic tracking-[1px]">Instagramie.</span>
           </p>
         </div>
         <div class="flex flex-col gap-6 leading-[150%]">
@@ -573,12 +594,13 @@
               font-size: 16px;
               font-style: normal;
               font-weight: 400;
-              line-height: 150%; 
+              line-height: 150%;
               letter-spacing: -0.16px;
-              white-space: nowrap
+              white-space: nowrap;
             "
           >
-            Śledź nasze <br/> najnowsze  realizacje!
+            Śledź nasze <br />
+            najnowsze realizacje!
           </p>
           <div class="flex">
             <button
@@ -606,8 +628,7 @@
 
           <div class="flex flex-col lg:flex-row gap-6">
             <span
-              class="text-[16px] regular my-auto block inter leading-[150%]"
-              style="letter-spacing: -1%"
+              class="text-[16px] regular my-auto block inter leading-[150%] tracking-[-1%]"
               >Daj znać, co możemy dla Ciebie zrobić!</span
             >
             <button
@@ -619,10 +640,7 @@
         </div>
         <div class="pt-[62px] flex flex-col lg:flex-row justify-between">
           <div class="flex flex-col lg:flex-row gap-4 lg:gap-12 inter">
-            <a
-              href=""
-              class="text-sm leading-[150%] inter"
-              style="letter-spacing: -1%"
+            <a href="" class="text-sm leading-[150%] inter tracking-[-1%]"
               >Kontakt</a
             >
             <a
@@ -633,28 +651,22 @@
             >
             <a
               href="https://www.facebook.com/"
-              class="text-sm leading-[150%] inter"
-              style="letter-spacing: -1%"
+              class="text-sm leading-[150%] inter tracking-[-1%]"
               >Facebook</a
             >
             <a
               href="https://www.linkedin.com/"
-              class="text-sm leading-[150%] inter"
-              style="letter-spacing: -1%"
+              class="text-sm leading-[150%] inter tracking-[1%]"
               >Linkedin</a
             >
           </div>
           <div
             class="flex flex-col lg:flex-row gap-4 lg:gap-12 mt-4 lg:mt-0 inter"
           >
-            <span
-              class="text-sm leading-[150%] inter"
-              style="letter-spacing: -1%"
+            <span class="text-sm leading-[150%] inter tracking-[-1%]"
               >000-000-000</span
             >
-            <span
-              class="text-sm leading-[150%] inter"
-              style="letter-spacing: -1%"
+            <span class="text-sm leading-[150%] inter tracking-[-1%]"
               >giarddesign@kontakt.pl</span
             >
           </div>
@@ -662,9 +674,7 @@
         <div
           class="mt-12 lg:mt-[120px] flex flex-col md:flex-row mt-12 md:mt-0 justify-between inter"
         >
-          <span style="letter-spacing: -1%" class="inter"
-            >Prawa zastrzeżone © 2022</span
-          >
+          <span class="inter tracking-[-1%]">Prawa zastrzeżone © 2022</span>
           <div class="flex gap-4 mt-4 md:mt-0">
             <span>made by</span>
             <img src="./assets/adRespect.png" alt="adRespect" />
@@ -674,7 +684,6 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/macy@2.5.0/dist/macy.min.js"></script>
     <script src="/msn.js"></script>
-
     <script src="/script.js"></script>
   </body>
 </html>
