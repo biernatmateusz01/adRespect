@@ -5,7 +5,6 @@ const buttonForOpenOffer = document.getElementById("openOffer");
 const inputSearch = document.getElementById("inputSearch");
 let image = "";
 
-
 //Open offer
 buttonForOpenOffer.addEventListener("click", function () {
   menuForOpen.classList.toggle("hidden");

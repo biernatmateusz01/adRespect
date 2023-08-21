@@ -22,10 +22,10 @@
 
 @keyframes show-modal {
   0% {
-    opacity: 0
+    opacity: 0;
   }
   100% {
-   opacity: 1;
+    opacity: 1;
   }
 }
 
@@ -33,9 +33,6 @@
   animation: fade-in 1s ease-out;
 }
 
-
 .show-gallery {
   animation: show-gallery 1s ease-out;
 }
-
-
